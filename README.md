@@ -6,6 +6,7 @@
 
 ##### Please rename and adjust the database config file
 > mv ./config/database.yml.example ./config/database.yml
+
 > vim  ./config/database.yml
 
 My personal database is postgresql 
@@ -17,6 +18,7 @@ Please be patient, the seed file will create **2 million entries** in the databa
 > rails s RAILS_ENV=production
 
 Current two API end-points are :
+
 http://localhost:3000/api/v1/tasks
 - http://localhost:3000/api/v1/tasks?filter[when]=future
 - http://localhost:3000/api/v1/tasks?filter[when]=past
