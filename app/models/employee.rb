@@ -11,6 +11,6 @@ class Employee < ApplicationRecord
   }
 
   scope :training, -> {
-    where(status: :active)
+    where(status: :training)
   }
 end
