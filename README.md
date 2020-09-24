@@ -8,9 +8,12 @@
 > mv ./config/database.yml.example ./config/database.yml
 > vim  ./config/database.yml
 
-My personal database is postgresql
+My personal database is postgresql 
 
 > rails db:create db:migrate db:seed RAILS_ENV=production
+
+Please be patient, the seed file will create **2 million entries** in the database, this will spend about 20 seconds.
+
 > rails s RAILS_ENV=production
 
 Current two API end-points are :
@@ -24,8 +27,10 @@ http://localhost:3000/api/v1/employees
 
 At the end of the responsed JSON, we can find the pagination info.
 For Example:
-> "links": {
->		"first": "http://localhost:3000/api/v1/employees?page%5Blimit%5D=20&page%5Boffset%5D=0",
->		"next": "http://localhost:3000/api/v1/employees?page%5Blimit%5D=20&page%5Boffset%5D=20",
->		"last": "http://localhost:3000/api/v1/employees?page%5Blimit%5D=20&page%5Boffset%5D=80"
-> }
+ ```json
+    "links": {
+    		"first": "http://localhost:3000/api/v1/employees?page%5Blimit%5D=20&page%5Boffset%5D=0",
+    		"next": "http://localhost:3000/api/v1/employees?page%5Blimit%5D=20&page%5Boffset%5D=20",
+    		"last": "http://localhost:3000/api/v1/employees?page%5Blimit%5D=20&page%5Boffset%5D=80"
+     }
+```
