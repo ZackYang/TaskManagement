@@ -15,7 +15,7 @@ My personal database is postgresql
 
 Please be patient, the seed file will create **2 million entries** in the database, this will spend about 20 seconds.
 
-> rails s RAILS_ENV=production
+> RAILS_ENV=production rails s
 
 Current two API end-points are :
 
